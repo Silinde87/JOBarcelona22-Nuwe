@@ -41,6 +41,6 @@ Default.argTypes = {
 Default.parameters = {
   design: {
     type: 'figma',
-    url: 'https://www.figma.com/file/7doTK0BndAgqL0r7ArSLIb/DS-SingularCover?node-id=588%3A1012',
+    url: '',
   },
 };
