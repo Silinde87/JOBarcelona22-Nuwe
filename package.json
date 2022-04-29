@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "build-storybook -o ./build -c .storybook",
+    "build:lib": "rm -rf ./lib && tsc --noEmit false",
     "test": "react-scripts test",
     "test:ci": "react-scripts test --ci --coverage --watchAll=false || exit 1",
     "storybook": "start-storybook -p 6006"
@@ -19,11 +20,6 @@
     "url": "https://github.com/Silinde87/JOBarcelona22-Nuwe/issues"
   },
   "homepage": "https://github.com/Silinde87/JOBarcelona22-Nuwe#readme",
-  "peerDependencies": {
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-is": "17.0.2"
-  },
   "dependencies": {
     "@testing-library/jest-dom": "5.11.10",
     "@testing-library/react": "11.2.5",
