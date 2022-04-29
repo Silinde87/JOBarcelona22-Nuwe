@@ -9,7 +9,7 @@ export type CardProps = {
 
 const Card: React.FC<CardProps> = ({
   children,
-  dataTestId = 'some-card-component',
+  dataTestId = 'card-component',
   theme,
   ...otherProps
 }) => {
