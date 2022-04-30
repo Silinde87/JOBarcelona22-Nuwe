@@ -1,13 +1,16 @@
+import { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 import { Typographys } from './Typography.styled';
-import { theme } from '../../themes/theme';
+import { Theme } from '../../shared/Interfaces/theme';
 
 export type TypographyProps = {
   type?: Types;
-  size?: Sizes;
-  weight?: Weights;
+  weight?: Weights | null;
+  size?: Sizes | null;
   color?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   style?: object;
+  theme?: Theme;
 };
 
 export type TypographyStyleProps = {
@@ -16,6 +19,14 @@ export type TypographyStyleProps = {
   size?: Sizes;
   style?: object;
 };
+
+export enum Sizes {
+  XL = 'XL',
+  L = 'L',
+  M = 'M',
+  S = 'S',
+  XS = 'XS',
+}
 
 export enum Weights {
   LIGHT = 'LIGHT',
@@ -28,26 +39,32 @@ export enum Types {
   H2 = 'H2',
   H3 = 'H3',
   P = 'P',
-}
-export enum Sizes {
-  XL = 'XL',
-  L = 'L',
-  M = 'M',
-  S = 'S',
+  CAPTION = 'CAPTION',
 }
 
-const Typography: React.FC<TypographyProps> = ({
-  children,
-  type = Types.H1,
-  size = null,
-  weight = null,
-  color = theme.gray800,
-  style,
-  ...otherProps
-}) => {
+const Typography: React.FC<TypographyProps> = (props) => {
+  const themeContext = useContext(ThemeContext);
+  const {
+    children,
+    type = Types.P,
+    size = null,
+    weight = null,
+    color = themeContext.gray800,
+    style,
+    theme,
+    ...otherProps
+  } = props;
   const Text = Typographys[type];
   return (
-    <Text size={size} weight={weight} color={color} style={style} {...otherProps}>
+    <Text
+      type={type}
+      size={size}
+      weight={weight}
+      color={color}
+      theme={theme}
+      style={style}
+      {...otherProps}
+    >
       {children}
     </Text>
   );
