@@ -37,7 +37,7 @@ const theme = {
   information300: '#FAEED6',
 
   success400: '#256F4B',
-  success350: '#2E8A5D',
+  success350: '#569b51',
   success300: '#E2F5EC',
   transparent: 'transparent',
 };
