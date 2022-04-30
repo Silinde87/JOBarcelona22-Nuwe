@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 import { Typographys } from './Typography.styled';
-import { Theme } from '../../shared/Interfaces/theme';
 
 export type TypographyProps = {
   type?: Types;
@@ -10,7 +9,6 @@ export type TypographyProps = {
   color?: string;
   children?: React.ReactNode;
   style?: object;
-  theme?: Theme;
 };
 
 export type TypographyStyleProps = {
@@ -51,20 +49,11 @@ const Typography: React.FC<TypographyProps> = (props) => {
     weight = null,
     color = themeContext.gray800,
     style,
-    theme,
     ...otherProps
   } = props;
   const Text = Typographys[type];
   return (
-    <Text
-      type={type}
-      size={size}
-      weight={weight}
-      color={color}
-      theme={theme}
-      style={style}
-      {...otherProps}
-    >
+    <Text type={type} size={size} weight={weight} color={color} style={style} {...otherProps}>
       {children}
     </Text>
   );

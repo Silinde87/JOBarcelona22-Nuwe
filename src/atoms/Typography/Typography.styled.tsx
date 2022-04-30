@@ -34,45 +34,39 @@ const Typographys = {
   `,
 };
 
+type TypographyOptions = {
+  [key: string]: string;
+};
+
 const getFontWeight = (weight: string): string => {
-  switch (weight) {
-    case Weights.LIGHT:
-      return '300';
-    case Weights.REGULAR:
-      return '400';
-    case Weights.SEMIBOLD:
-      return '600';
-  }
+  const fontWeights: TypographyOptions = {
+    [Weights.LIGHT]: '300',
+    [Weights.REGULAR]: '400',
+    [Weights.SEMIBOLD]: '600',
+  };
+  return fontWeights[weight];
 };
 
 const getFontSize = (size: string): string => {
-  switch (size) {
-    case Sizes.XS:
-      return '14px';
-    case Sizes.S:
-      return '18px';
-    case Sizes.M:
-      return '24px';
-    case Sizes.L:
-      return '32px';
-    case Sizes.XL:
-      return '40px';
-  }
+  const fontSizes: TypographyOptions = {
+    [Sizes.XS]: '14px',
+    [Sizes.S]: '18px',
+    [Sizes.M]: '24px',
+    [Sizes.L]: '32px',
+    [Sizes.XL]: '40px',
+  };
+  return fontSizes[size];
 };
 
 const getFontHeight = (size: string): string => {
-  switch (size) {
-    case Sizes.XS:
-      return '16px';
-    case Sizes.S:
-      return '20px';
-    case Sizes.M:
-      return '28px';
-    case Sizes.L:
-      return '36px';
-    case Sizes.XL:
-      return '42px';
-  }
+  const fontHeights: TypographyOptions = {
+    [Sizes.XS]: '16px',
+    [Sizes.S]: '20px',
+    [Sizes.M]: '28px',
+    [Sizes.L]: '36px',
+    [Sizes.XL]: '42px',
+  };
+  return fontHeights[size];
 };
 
 export { Typographys };
