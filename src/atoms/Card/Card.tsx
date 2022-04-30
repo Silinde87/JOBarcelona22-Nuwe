@@ -1,20 +1,13 @@
 import { InnerContainer, StyledCard } from './Card.styled';
-import { Theme } from '../../shared/Interfaces/theme';
 
 export type CardProps = {
   children: React.ReactNode;
   dataTestId?: string;
-  theme?: Theme;
 };
 
-const Card: React.FC<CardProps> = ({
-  children,
-  dataTestId = 'card-component',
-  theme,
-  ...otherProps
-}) => {
+const Card: React.FC<CardProps> = ({ children, dataTestId = 'card-component', ...otherProps }) => {
   return (
-    <StyledCard theme={theme} {...otherProps} data-testid={dataTestId}>
+    <StyledCard {...otherProps} data-testid={dataTestId}>
       <InnerContainer>{children}</InnerContainer>
     </StyledCard>
   );
