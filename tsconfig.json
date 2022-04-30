@@ -1,7 +1,13 @@
 {
+  "extends": "./tsconfig.path.json",
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -19,6 +25,11 @@
     "strictNullChecks": false,
     "outDir": "./lib"
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "build", ".storybook"]
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "build",
+    ".storybook"
+  ]
 }
