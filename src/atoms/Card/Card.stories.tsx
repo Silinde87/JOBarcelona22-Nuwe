@@ -9,8 +9,10 @@ export default {
 } as Meta;
 
 const Template: Story = (args) => {
+  const handleClick = (): void => {};
+
   return (
-    <Card {...args}>
+    <Card onClick={handleClick} {...args}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula mi non nisl
       vestibulum, pellentesque semper leo auctor. Sed tristique est vitae dui aliquam aliquam.
       Pellentesque sed varius urna, facilisis consequat diam. Nullam scelerisque mollis justo et
@@ -26,6 +28,8 @@ const Template: Story = (args) => {
 };
 
 export const Default = Template.bind({});
+
+Default.args = {};
 
 Default.argTypes = {
   theme: { table: { disable: true } },

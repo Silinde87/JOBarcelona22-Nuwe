@@ -3,11 +3,12 @@ import { InnerContainer, StyledCard } from './Card.styled';
 export type CardProps = {
   children: React.ReactNode;
   dataTestId?: string;
+  onClick?: () => void;
 };
 
 const Card: React.FC<CardProps> = ({ children, dataTestId = 'card-component', ...otherProps }) => {
   return (
-    <StyledCard {...otherProps} data-testid={dataTestId}>
+    <StyledCard data-testid={dataTestId} {...otherProps}>
       <InnerContainer>{children}</InnerContainer>
     </StyledCard>
   );
