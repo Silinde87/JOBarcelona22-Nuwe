@@ -36,7 +36,7 @@ const theme = {
 
   information300: '#FAEED6',
 
-  success400: '#256F4B',
+  success400: '#488443',
   success350: '#569b51',
   success300: '#E2F5EC',
   transparent: 'transparent',
