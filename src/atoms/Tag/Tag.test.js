@@ -11,7 +11,7 @@ describe('Tag Component', () => {
 
     expect(getByText(/This is a tag/i)).toBeInTheDocument();
     expect(renderCard).toHaveStyle(`
-        background-color: ${theme.success350};
+        background-color: ${theme.success400};
         border-radius: 25px;
     `);
   });

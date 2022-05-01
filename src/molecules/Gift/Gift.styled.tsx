@@ -1,14 +1,13 @@
+import styled from 'styled-components';
 import Card from './../../atoms/Card';
 import Typography from './../../atoms/Typography';
-
-import styled from 'styled-components';
 
 const GiftContainer = styled(Card)`
   cursor: pointer;
   user-select: none;
   transition: all 0.2s;
-  width: 320px;
-  height: 120px;
+  max-width: 360px;
+  max-height: 170px;
 
   &:hover,
   &:focus,
@@ -21,8 +20,15 @@ const GiftContainer = styled(Card)`
 `;
 const Title = styled(Typography)`
   margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 `;
-const Description = styled(Typography)``;
+const Description = styled(Typography)`
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+`;
 const TagsWrapper = styled.div`
   display: flex;
   column-gap: 24px;

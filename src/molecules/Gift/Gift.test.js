@@ -55,8 +55,8 @@ describe('Gift Component', () => {
     const giftComponent = queryByTestId('gift-component');
 
     expect(giftComponent).toHaveStyle(`
-        width: 320px;
-        height: 120px;
+        max-width: 360px;
+        max-height: 170px;
         cursor: pointer;
         border: 1.5px solid ${theme.gray500};
         background-color: ${theme.gray200};

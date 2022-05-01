@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
-import Typography, { Types } from '../Typography';
-import { TagWrapper } from './Tag.styled';
+import { Types } from '../Typography';
+import { TagText, TagWrapper } from './Tag.styled';
 
 export type TagProps = {
   children: React.ReactNode;
@@ -12,9 +12,9 @@ const Tag: React.FC<TagProps> = ({ children, dataTestId = 'tag', ...otherProps }
   const themeContext = useContext(ThemeContext);
   return (
     <TagWrapper data-testid={dataTestId} {...otherProps}>
-      <Typography color={themeContext.gray200} type={Types.P} style={{ margin: '0' }}>
+      <TagText color={themeContext.gray200} type={Types.P}>
         {children}
-      </Typography>
+      </TagText>
     </TagWrapper>
   );
 };
