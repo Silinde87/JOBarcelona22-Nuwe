@@ -7,6 +7,8 @@ import Typography, {
 } from './atoms/Typography';
 import Tag from './atoms/Tag';
 /* Molecules */
+import Gift from './molecules/Gift';
+/* Organisms */
 /** Utils */
 
-export { Card, Typography, TypographySizes, TypographyWeights, TypographyTypes, Tag };
+export { Card, Typography, TypographySizes, TypographyWeights, TypographyTypes, Tag, Gift };

@@ -7,7 +7,8 @@ const GiftContainer = styled(Card)`
   cursor: pointer;
   user-select: none;
   transition: all 0.2s;
-  width: 320px;
+  width: 340px;
+  min-width: 340px;
   height: 120px;
 
   &:hover,
@@ -21,8 +22,15 @@ const GiftContainer = styled(Card)`
 `;
 const Title = styled(Typography)`
   margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 `;
-const Description = styled(Typography)``;
+const Description = styled(Typography)`
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+`;
 const TagsWrapper = styled.div`
   display: flex;
   column-gap: 24px;
