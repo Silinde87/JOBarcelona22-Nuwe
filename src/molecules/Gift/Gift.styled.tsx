@@ -1,15 +1,13 @@
+import styled from 'styled-components';
 import Card from './../../atoms/Card';
 import Typography from './../../atoms/Typography';
-
-import styled from 'styled-components';
 
 const GiftContainer = styled(Card)`
   cursor: pointer;
   user-select: none;
   transition: all 0.2s;
-  width: 340px;
-  min-width: 340px;
-  height: 120px;
+  max-width: 360px;
+  max-height: 170px;
 
   &:hover,
   &:focus,

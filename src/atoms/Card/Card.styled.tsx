@@ -10,8 +10,6 @@ const StyledCard = styled.div<CardProps>`
   padding: 24px;
 `;
 
-const InnerContainer = styled.div`
-  width: 100%;
-`;
+const InnerContainer = styled.div``;
 
 export { StyledCard, InnerContainer };
