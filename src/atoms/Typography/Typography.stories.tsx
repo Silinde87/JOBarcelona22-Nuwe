@@ -23,7 +23,6 @@ Default.argTypes = {
   style: { table: { disable: true } },
   weight: { table: { disable: true } },
   size: { table: { disable: true } },
-  theme: { table: { disable: true } },
   color: {
     control: { type: 'select', options: getColorsFromTheme() },
   },
