@@ -6,8 +6,8 @@ const GiftContainer = styled(Card)`
   cursor: pointer;
   user-select: none;
   transition: all 0.2s;
-  max-width: 360px;
-  max-height: 170px;
+  width: 360px;
+  height: 170px;
 
   &:hover,
   &:focus,
