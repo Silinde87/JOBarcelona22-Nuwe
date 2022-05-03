@@ -3,8 +3,11 @@ import Typography, { Types } from './../../atoms/Typography';
 import { GiftListContainer, GiftsWrapper } from './GiftList.styled';
 
 export type GiftListProps = {
+  /** Assigns data-testid of the component */
   dataTestId?: string;
+  /** Title label of GiftList component */
   title: string;
+  /** List of gifts */
   gifts?: GiftProps[];
 };
 

@@ -29,9 +29,7 @@ export const Default = Template.bind({});
 
 Default.args = {};
 
-Default.argTypes = {
-  dataTestId: { table: { disable: true } },
-};
+Default.argTypes = {};
 
 Default.parameters = {
   design: {

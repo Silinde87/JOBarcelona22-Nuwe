@@ -7,16 +7,17 @@ export default {
 } as Meta;
 
 const Template: Story = (args) => {
-  return <Tag>This is a Tag</Tag>;
+  return <Tag text={args.text} id={args.id} />;
 };
 
 export const Default = Template.bind({});
 
-Default.args = {};
-
-Default.argTypes = {
-  datTestId: { table: { disable: true } },
+Default.args = {
+  text: 'This is a tag',
+  id: '01',
 };
+
+Default.argTypes = {};
 
 Default.parameters = {
   design: {

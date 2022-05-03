@@ -24,7 +24,6 @@ Default.args = {
 };
 
 Default.argTypes = {
-  dataTestId: { table: { disable: true } },
   onClick: { table: { disable: true } },
 };
 
