@@ -2,6 +2,11 @@ import Gift, { GiftProps } from './../../molecules/Gift';
 import Typography, { Types } from './../../atoms/Typography';
 import { GiftListContainer, GiftsWrapper } from './GiftList.styled';
 
+/**
+ * GiftListProps
+ * @memberof GiftList
+ * @alias GiftListProps
+ */
 export type GiftListProps = {
   /** Assigns data-testid of the component */
   dataTestId?: string;
@@ -11,6 +16,14 @@ export type GiftListProps = {
   gifts?: GiftProps[];
 };
 
+/**
+ * Component used to render a GiftList
+ *
+ * @component
+ * @example
+ * const tags = GiftProps[];
+ * <Gift title={'title'} gifts={gifts} />
+ */
 const GiftList: React.FC<GiftListProps> = ({
   dataTestId = 'giftList-component',
   title,

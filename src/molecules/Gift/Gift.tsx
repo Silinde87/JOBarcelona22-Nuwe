@@ -4,6 +4,11 @@ import Tag, { TagProps } from './../../atoms/Tag';
 import { Types, Weights } from './../../atoms/Typography';
 import { GiftContainer, TagsWrapper, Title, Description } from './Gift.styled';
 
+/**
+ * GiftProps
+ * @memberof Gift
+ * @alias GiftProps
+ */
 export type GiftProps = {
   /** Assigns data-testid of the component */
   dataTestId?: string;
@@ -17,6 +22,14 @@ export type GiftProps = {
   onClick?: () => void;
 };
 
+/**
+ * Component used to render a Gift
+ *
+ * @component
+ * @example
+ * const tags = TagProps[];
+ * <Gift title={'title'} description={'description'} onClick={() => {}} tags={tags} />
+ */
 const Gift: React.FC<GiftProps> = ({
   dataTestId = 'gift-component',
   title,

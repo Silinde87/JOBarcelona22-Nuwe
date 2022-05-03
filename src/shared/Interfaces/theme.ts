@@ -1,3 +1,7 @@
+/**
+ * Enum for Theme Types
+ * @enum {Theme}
+ */
 interface Theme {
   gray1000: string;
   gray900: string;

@@ -16,6 +16,8 @@ export type CardProps = {
  * Component used to render a Card
  *
  * @component
+ * @example
+ * <Card dataTestId={'card'}>Lorem ipsum</Card>
  */
 const Card: React.FC<CardProps> = ({ children, dataTestId = 'card-component', ...otherProps }) => {
   return (
