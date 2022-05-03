@@ -9,6 +9,16 @@ import Tag from './atoms/Tag';
 /* Molecules */
 import Gift from './molecules/Gift';
 /* Organisms */
+import GiftList from './organisms/GiftList';
 /** Utils */
 
-export { Card, Typography, TypographySizes, TypographyWeights, TypographyTypes, Tag, Gift };
+export {
+  Card,
+  Typography,
+  TypographySizes,
+  TypographyWeights,
+  TypographyTypes,
+  Tag,
+  Gift,
+  GiftList,
+};

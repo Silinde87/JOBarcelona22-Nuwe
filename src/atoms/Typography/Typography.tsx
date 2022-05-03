@@ -2,15 +2,31 @@ import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 import { Typographys } from './Typography.styled';
 
+/**
+ * TypographyProps
+ * @memberof Typography
+ * @alias TypographyProps
+ */
 export type TypographyProps = {
+  /** Typography type according to Types */
   type?: Types;
+  /** Typography weight according to Weights */
   weight?: Weights | null;
+  /** Typography size according to Sizes */
   size?: Sizes | null;
+  /** Color of the text. */
   color?: string;
+  /** The label of the component */
   children?: React.ReactNode;
+  /** Custom style for the component */
   style?: object;
 };
 
+/**
+ * TypographyStyleProps
+ * @memberof Typography
+ * @alias TypographyStyleProps
+ */
 export type TypographyStyleProps = {
   weight?: Weights;
   color?: string;
@@ -18,6 +34,10 @@ export type TypographyStyleProps = {
   style?: object;
 };
 
+/**
+ * Enum for Typography Sizes
+ * @enum {Sizes}
+ */
 export enum Sizes {
   XL = 'XL',
   L = 'L',
@@ -26,12 +46,20 @@ export enum Sizes {
   XS = 'XS',
 }
 
+/**
+ * Enum for Typography Weights
+ * @enum {Weights}
+ */
 export enum Weights {
   LIGHT = 'LIGHT',
   REGULAR = 'REGULAR',
   SEMIBOLD = 'SEMIBOLD',
 }
 
+/**
+ * Enum for Typography Types
+ * @enum {Types}
+ */
 export enum Types {
   H1 = 'H1',
   H2 = 'H2',
@@ -40,6 +68,13 @@ export enum Types {
   CAPTION = 'CAPTION',
 }
 
+/**
+ * Component used to render a Typography
+ *
+ * @component
+ * @example
+ * <Typography type={Types.H1} color={Theme.gray200}>Lorem ipsum</Typography>
+ */
 const Typography: React.FC<TypographyProps> = (props) => {
   const themeContext = useContext(ThemeContext);
   const {

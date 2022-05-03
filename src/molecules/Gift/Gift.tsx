@@ -1,22 +1,35 @@
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
-import Tag from './../../atoms/Tag';
+import Tag, { TagProps } from './../../atoms/Tag';
 import { Types, Weights } from './../../atoms/Typography';
 import { GiftContainer, TagsWrapper, Title, Description } from './Gift.styled';
 
-type Tags = {
-  text: string;
-  id: string;
-};
-
+/**
+ * GiftProps
+ * @memberof Gift
+ * @alias GiftProps
+ */
 export type GiftProps = {
+  /** Assigns data-testid of the component */
   dataTestId?: string;
+  /** Title label of gift component */
   title: string;
+  /** Description label of gift component */
   description: string;
-  tags?: Tags[];
+  /** List of tags */
+  tags?: TagProps[];
+  /** Triggers the onClick function */
   onClick?: () => void;
 };
 
+/**
+ * Component used to render a Gift
+ *
+ * @component
+ * @example
+ * const tags = TagProps[];
+ * <Gift title={'title'} description={'description'} onClick={() => {}} tags={tags} />
+ */
 const Gift: React.FC<GiftProps> = ({
   dataTestId = 'gift-component',
   title,
@@ -35,7 +48,7 @@ const Gift: React.FC<GiftProps> = ({
       </Description>
       <TagsWrapper data-testid="tags-wrapper">
         {tags.map(({ text, id }) => {
-          return <Tag key={id}>{text}</Tag>;
+          return <Tag text={text} key={id} id={id} />;
         })}
       </TagsWrapper>
     </GiftContainer>
