@@ -1,46 +1,111 @@
-# Getting Started with Create React App
+# JOBarcelona'22 / Nuwe by Pau Rodríguez
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![](https://img.shields.io/github/deployments/Silinde87/JOBarcelona22-Nuwe/production?label=Vercel&logo=Vercel&logoColor=white)
+![](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fjobarcelona22-nuwe.vercel.app%2F)
 
-## Available Scripts
 
-In the project directory, you can run:
+This library of React components is developed as a part of task for JOBarcelona'22 Hackaton arranged by Nuwe.
+To main goal is to develop a reusable component that shows many giftlists.
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## How it looks
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+🔗 [Live Demo](https://jobarcelona22-nuwe.vercel.app/)
 
-### `yarn test`
+<p align="center">
+    <img src="https://github.com/Silinde87/repo-media/blob/main/images/jobarcelona22.gif?raw=true" width="600" alt="Demo video showing the usage of the application" />
+</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `yarn build`
+## Avaiable scripts in the application
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### yarn install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> **Install app dependencies**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### yarn storybook
 
-### `yarn eject`
+> **Runs the app** in the development mode. Open http://localhost:6006 to view it in the browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### yarn test
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> **Launches the unit test runner** (Jest/RTL) in the interactive watch mode.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### yarn test:ci
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+> **Launches the unit test runner** (Jest/RTL) and shows a report of testing **coverage**
 
-## Learn More
+### yarn build
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> **Generates a build version ready for deploy**.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### yarn build:lib
+
+> **Generate files ready to be used inside another reat project**.
+
+### yarn docs
+
+> **Generates de documentation of the project** (JSDocs). Open `./src/docs/index.html` to see it.
+
+---
+
+## Stack
+
+| Package              | Version |
+| -------------------- | ------- |
+| React & react-dom    | 17.0.2  |
+| typescript           |  4.1.2  |
+| styled-components    |  5.2.1  |
+| jest/testing-library | 5.11.10 |
+| storybook & addons   | 6.4.22  |
+| eslint               | 7.22.0  |
+| prettier             | 2.2.1   |
+| jsdoc                | 3.6.10  |
+
+## Output
+
+```
+.
+├── README.md
+├── package.json
+├── babel.config.json
+├── jest-setup.ts
+├── jest.config.js
+├── jsdoc.conf.json
+├── tsconfig.json
+├── tsconfig.path.json
+├── .gitignore
+├── .eslintrc.js
+├── .prettierrc
+├── node_modules
+├── docs                            # Documentation generated
+├── .storybook                      # Required storybook files
+└── src                             # React App folder
+    ├── atoms                       # The smallest components
+    │   ├── Card
+    │   ├── Tag
+    │   └── Typography
+    ├── molecules                   # A combination of atoms components
+    │   └── Gift
+    ├── organisms                   # The most complex components
+    │   └── GiftList
+    ├── shared                      # Shared utilites and files such as utils or rules
+    ├── themes                      # The color palette used by the components
+    ├── index.ts
+    └── setupTests.js
+```
+
+---
+
+## Author
+
+👤 **Pau Rodríguez**
+
+- Website: https://www.linkedin.com/in/paurodriguezmolina/
+- Github: [@Silinde87](https://github.com/Silinde87)
+- LinkedIn: [@paurodriguezmolina](https://linkedin.com/in/paurodriguezmolina)
+- Twitter: [@Silinde87](https://twitter.com/Silinde87)
+
+## License
+[GNU General Public License](https://opensource.org/licenses/gpl-license)
