@@ -1,12 +1,12 @@
 /* istanbul ignore file */
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Story } from '@storybook/react/types-6-0';
 
 import Card from './Card';
 
 export default {
   title: 'Atoms/Card',
   component: Card,
-} as Meta;
+};
 
 const Template: Story = (args) => {
   return (

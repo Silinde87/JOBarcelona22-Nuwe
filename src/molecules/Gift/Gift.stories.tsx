@@ -1,11 +1,11 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Story } from '@storybook/react/types-6-0';
 import Gift from './Gift';
 import { GiftProps } from './Gift.types';
 
 export default {
   title: 'Molecules/Gift',
   component: Gift,
-} as Meta;
+};
 
 const Template: Story<GiftProps> = (args) => {
   const handleClick = (): void => {};

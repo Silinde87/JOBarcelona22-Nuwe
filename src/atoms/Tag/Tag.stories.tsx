@@ -1,10 +1,10 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Story } from '@storybook/react/types-6-0';
 import Tag from './Tag';
 
 export default {
   title: 'Atoms/Tag',
   component: Tag,
-} as Meta;
+};
 
 const Template: Story = (args) => {
   return <Tag text={args.text} id={args.id} />;
