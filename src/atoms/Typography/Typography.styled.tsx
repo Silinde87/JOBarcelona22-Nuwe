@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { TypographyProps, Weights, Sizes } from './Typography';
+import { Weights, Sizes } from './Typography';
+import { TypographyProps } from './Typography.types';
 
 const Typographys = {
   H1: styled.h1<TypographyProps>`

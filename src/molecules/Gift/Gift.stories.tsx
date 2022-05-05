@@ -1,6 +1,6 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
-
-import Gift, { GiftProps } from './Gift';
+import Gift from './Gift';
+import { GiftProps } from './Gift.types';
 
 export default {
   title: 'Molecules/Gift',

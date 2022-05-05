@@ -1,20 +1,7 @@
-import Gift, { GiftProps } from './../../molecules/Gift';
+import Gift from './../../molecules/Gift';
 import Typography, { Types } from './../../atoms/Typography';
 import { GiftListContainer, GiftsWrapper } from './GiftList.styled';
-
-/**
- * GiftListProps
- * @memberof GiftList
- * @alias GiftListProps
- */
-export type GiftListProps = {
-  /** Assigns data-testid of the component */
-  dataTestId?: string;
-  /** Title label of GiftList component */
-  title: string;
-  /** List of gifts */
-  gifts?: GiftProps[];
-};
+import { GiftListProps } from './GiftList.types';
 
 /**
  * Component used to render a GiftList
