@@ -1,12 +1,13 @@
 /* eslint-disable no-console */
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Story } from '@storybook/react/types-6-0';
 
-import GiftList, { GiftListProps } from './GiftList';
+import GiftList from './GiftList';
+import { GiftListProps } from './GiftList.types';
 
 export default {
   title: 'Organisms/GiftList',
   component: GiftList,
-} as Meta;
+};
 
 const Template: Story<GiftListProps> = (args) => {
   return <GiftList {...args} />;

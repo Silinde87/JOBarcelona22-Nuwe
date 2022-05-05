@@ -1,38 +1,7 @@
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 import { Typographys } from './Typography.styled';
-
-/**
- * TypographyProps
- * @memberof Typography
- * @alias TypographyProps
- */
-export type TypographyProps = {
-  /** Typography type according to Types */
-  type?: Types;
-  /** Typography weight according to Weights */
-  weight?: Weights | null;
-  /** Typography size according to Sizes */
-  size?: Sizes | null;
-  /** Color of the text. */
-  color?: string;
-  /** The label of the component */
-  children?: React.ReactNode;
-  /** Custom style for the component */
-  style?: object;
-};
-
-/**
- * TypographyStyleProps
- * @memberof Typography
- * @alias TypographyStyleProps
- */
-export type TypographyStyleProps = {
-  weight?: Weights;
-  color?: string;
-  size?: Sizes;
-  style?: object;
-};
+import { TypographyProps } from './Typography.types';
 
 /**
  * Enum for Typography Sizes

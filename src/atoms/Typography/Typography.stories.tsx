@@ -1,12 +1,13 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
-import Typography, { Types, TypographyProps } from './Typography';
+import { Story } from '@storybook/react/types-6-0';
+import Typography, { Types } from './Typography';
+import { TypographyProps } from './Typography.types';
 import { theme } from '../../themes/theme';
 import { getColorsFromTheme } from '../../shared/utils/getColorsFromTheme';
 
 export default {
   title: 'Atoms/Typography',
   component: Typography,
-} as Meta;
+};
 
 const Template: Story<TypographyProps> = (args) => {
   return <Typography {...args}>Aceptar</Typography>;

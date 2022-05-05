@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { CardProps } from './Card';
+import { CardProps } from './Card.types';
 
 const StyledCard = styled.div<CardProps>`
   border-radius: 8px;
